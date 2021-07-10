@@ -1,38 +1,38 @@
 <template>
     <article class="container content" style="margin-bottom: 200px">
-        <h1 class="has-text-centered is-size-1 has-text-primary" style="margin-top: 50px;">Gas Sweet Spot 🎯</h1>
+        <h1 class="has-text-centered is-size-1 has-text-primary" style="margin-top: 50px;">DeepGwei</h1>
         <hr/>
         <div class="columns">
             <div class="column">
                 <line-chart :chart-data="datacollection" :options="options" v-if="totalTxs"></line-chart>
-                <h3 v-else class="is-family-monospace has-text-grey-light">Brewing a graph...</h3>
+                <h3 v-else class="is-family-monospace has-text-grey-light">⏰ rendering graph...</h3>
             </div>
             <div class="column">
-                <h2>Welcome to the knowledge of the crowd...</h2>
+                <h2>Ethereum Transaction Pricing</h2>
                 <p>
-                   Generally people want transactions processed in the new few minutes.
+                   
                 </p>
                 <p>
-                    This shows the best "top" price for quick acceptance...in theory.
+                    
                 </p>
 
-                <h3 class="is-family-monospace has-text-grey-light" v-if="totalTxs">{{ totalTxs }} pending txs crunched</h3>
-                <h3 v-else class="is-family-monospace has-text-grey-light">Waiting for txs...</h3>
+                <h3 class="is-family-monospace has-text-grey-light" v-if="totalTxs">{{ totalTxs }} pending transactions</h3>
+                <h3 v-else class="is-family-monospace has-text-grey-light">accessing mempool...</h3>
 
                 <div class="notification is-light" v-if="winning">
-                    <span class="is-size-3">🧐</span> The crowd thinks <span class="has-text-weight-semibold">{{ winning.key }}ish gwei</span> would be accepted in the new few blocks...
+                    <span class="is-size-3">⛽️</span> Suggested pricing<span class="has-text-weight-semibold">{{ winning.key }} gwei</span> would be accepted within the next 5 blocks
                 </div>
 
-                <b-field label="Modulo" message="Find the sweet spot of gas ranges for your analysis" style="margin-top: 40px">
+                <b-field label="Transaction Inclusion Preference" message="Adjust based on transaction settlement time" style="margin-top: 40px">
                     <b-slider v-model="modulo" :min="5" :max="50" :step="5"></b-slider>
                 </b-field>
 
-                <b-field label="Start over?" message="When you hit the site we start processing txs">
-                    <button @click="reset" class="button is-primary is-outlined">Reset stats</button>
+                <b-field label="Reset" message="purge cache and establish a new connection">
+                    <button @click="reset" class="button is-primary is-outlined">Reset</button>
                 </b-field>
 
                 <blockquote style="margin-top: 40px">
-                    We are using <a href="https://blocknative.com" target="_blank">Blocknative</a>'s the <a href="https://docs.blocknative.com/gas-platform" target="_blank">Gas Distribution feed</a>. This feed provides the distribution of the top gas prices in the mempool right now.
+                  Powered by<a href="https://blocknative.com" target="_blank">Blocknative</a>'s the <a href="https://docs.blocknative.com/gas-platform" target="_blank">Gas Distribution feed</a>. This feed provides the distribution of the top gas prices in the mempool right now.
                 </blockquote>
             </div>
         </div>
@@ -126,7 +126,7 @@
                 datasets: [
                   {
                     label: `top gas prices in the mempool`,
-                    backgroundColor: '#7957d5',
+                    backgroundColor: '#2188FF',
                     data: this.dataSet,
                     pointRadius: 0
                   }
