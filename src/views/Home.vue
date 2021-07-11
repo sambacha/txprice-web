@@ -5,7 +5,7 @@
         <div class="columns">
             <div class="column">
                 <line-chart :chart-data="datacollection" :options="options" v-if="totalTxs"></line-chart>
-                <h3 v-else class="is-family-monospace has-text-grey-light">⏰ rendering graph...</h3>
+                <h3 v-else class="is-family-monospace has-text-grey-light">rendering graph</h3>
             </div>
             <div class="column">
                 <h2>Ethereum Transaction Pricing</h2>
@@ -27,12 +27,12 @@
                     <b-slider v-model="modulo" :min="5" :max="50" :step="5"></b-slider>
                 </b-field>
 
-                <b-field label="Reset" message="purge cache and establish a new connection">
+                <b-field label="Calibrate" message="purge cache and establish a new connection">
                     <button @click="reset" class="button is-primary is-outlined">Reset</button>
                 </b-field>
 
                 <blockquote style="margin-top: 40px">
-                  Powered by<a href="https://blocknative.com" target="_blank">Blocknative</a>'s the <a href="https://docs.blocknative.com/gas-platform" target="_blank">Gas Distribution feed</a>. This feed provides the distribution of the top gas prices in the mempool right now.
+                
                 </blockquote>
             </div>
         </div>
