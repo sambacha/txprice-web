@@ -88,7 +88,7 @@
             'https://api.blocknative.com/gasprices/distribution',
             {
               headers: {
-                'Authorization': `6f48615a-3c92-4adb-b593-69f10315f3ab`
+                'Authorization': `0a3cd861-402a-460f-af73-310a1cad1d33`
               }
             })
             .then(({data}) => {
