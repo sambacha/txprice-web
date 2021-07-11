@@ -26,11 +26,7 @@
                 <b-field label="Transaction Inclusion Preference" message="Adjust based on transaction settlement time" style="margin-top: 40px">
                     <b-slider v-model="modulo" :min="5" :max="50" :step="5"></b-slider>
                 </b-field>
-
-                <b-field label="Calibrate" message="purge cache and establish a new connection">
-                    <button @click="reset" class="button is-primary is-outlined">Reset</button>
-                </b-field>
-
+                
                 <blockquote style="margin-top: 40px">
                 
                 </blockquote>
