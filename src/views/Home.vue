@@ -1,6 +1,6 @@
 <template>
     <article class="container content" style="margin-bottom: 200px">
-        <h1 class="has-text-centered is-size-1 has-text-primary" style="margin-top: 50px;">DeepGwei</h1>
+        <h1 class="has-text-centered is-size-1 has-text-primary" style="margin-top: 50px;">TxPrice</h1>
         <hr/>
         <div class="columns">
             <div class="column">
@@ -8,7 +8,7 @@
                 <h3 v-else class="is-family-monospace has-text-grey-light">rendering graph</h3>
             </div>
             <div class="column">
-                <h2>Ethereum Transaction Pricing</h2>
+                <h2>Ethereum Gas Transaction Pricing</h2>
                 <p>
                    
                 </p>
