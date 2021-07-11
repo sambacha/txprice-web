@@ -28,7 +28,9 @@
                 </b-field>
                 
                 <blockquote style="margin-top: 40px">
-                
+               Gas price needed to have X% probability to qualify for inclusion in the next block. Need a high probability of being confirmed at the expense of spending extra gas? Use the 99% probability prediction.
+               Don't mind if the tx takes 2-3 blocks if it saves some gas? Use the 70% probability prediction.
+
                 </blockquote>
             </div>
         </div>
@@ -88,7 +90,7 @@
             'https://api.blocknative.com/gasprices/distribution',
             {
               headers: {
-                'Authorization': `0a3cd861-402a-460f-af73-310a1cad1d33`
+                'Authorization': `6f48615a-3c92-4adb-b593-69f10315f3ab`
               }
             })
             .then(({data}) => {
