@@ -1,5 +1,7 @@
 # txprice-web
 
+[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/898s.svg)](https://betteruptime.com/?utm_source=status_badge)
+
 ```js
 async function estimateGasPrice(provider: JsonRpcProvider): Promise<BigNumber | void> {
   try {
